@@ -24,7 +24,16 @@ The solution key points are as follows:
 
 ![RS---context-schema-github](https://user-images.githubusercontent.com/86782407/152809255-73a88a05-b4c8-489c-9d5f-44b5cffef537.jpg)
 
+### Verions
+
+| Version |                             Content                            |
+|:-------:|:--------------------------------------------------------------:|
+|    1    |      Infrastructure, Processing level 0 of Sentinel 1 & 3      |
+|   1.1   |     Infrastructure, Processing level 0 of Sentinel 1, 2 & 3    |
+|    2    | Infrastructure, Processing level 1, 2 & 3 of Sentinel 1, 2 & 3 |
+
 ### Summary of repositories' components
+
 - [infrastructure](https://github.com/COPRS/infrastructure) : This repository contains infrastructure Layout components of the Reference System Software
 - [monitoring](https://github.com/COPRS/monitoring) : This repository contains the components that support monitoring functions for Sentinel-1, Sentinel-2 and Sentinel-3 missions. Including metrics, log & trace collection, performance Indicator computing and monitoring GUI.
 - [production-common](https://github.com/COPRS/production-common) : This repository contains multi-Sentinel common processing components such as Ingestion chain, PRIP I/F, Data life Cycle, Catalog....
