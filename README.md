@@ -16,14 +16,6 @@ The Reference System Service is hosted on a secure Public Commercial Cloud and p
 
 This software is the exact complement of the ESA-driven Sentinel Data Processors. It provides all the components to integrate them in processing chains and to distribute the output products.
 
-### Technical characteristics
-
-The solution key points are as follows:
-- A micro-service architecture has proven its benefits in the past years, especially on operational systems delivering services with public access through Internet, including Commercial Public Cloud;
-- It is a robust architecture relying on independent, self-deployable software components bricks.
-
-![RS---context-schema-github](https://user-images.githubusercontent.com/86782407/152809255-73a88a05-b4c8-489c-9d5f-44b5cffef537.jpg)
-
 ### Summary of repositories' components
 - [infrastructure](https://github.com/COPRS/infrastructure) : This repository contains infrastructure Layout components of the Reference System Software
 - [monitoring](https://github.com/COPRS/monitoring) : This repository contains the components that support monitoring functions for Sentinel-1, Sentinel-2 and Sentinel-3 missions. Including metrics, log & trace collection, performance Indicator computing and monitoring GUI.
