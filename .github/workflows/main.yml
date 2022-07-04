@@ -1,0 +1,37 @@
+name: Export Documentation Production Common
+
+on:
+  push:
+    tags:
+      - "[0-9]+.[0-9]+.[0-9]+-rc[0-9]+"
+  workflow_dispatch:
+
+jobs:
+  convert_via_pandoc:
+    runs-on: ubuntu-18.04
+    strategy:
+      matrix:
+        document: [Installation Manual, Software Configuration File]
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: make output dir
+        id: make_output_dir
+        run: mkdir output # create output dir
+
+      - name: Create PDF
+        uses: docker://ghcr.io/moelauverjat/reference-system-software:dependencies_pandoc_latex
+        with:
+          args: -s --resource-path="/github/workspace/components/function2/" --listings -H /root/.pandoc/listings-setup.tex --table-of-contents --pdf-engine=xelatex --output="output/${{ matrix.document }}.pdf" --from=markdown "./components/function2/${{ matrix.document }}.md"
+
+      - uses: actions/upload-artifact@master
+        with:
+          name: documentation
+          path: output
+
+
+      # Runs a set of commands using the runners shell
+      - name: Run a multi-line script
+        run: |
+          echo Add other actions to build,
+          echo test, and deploy your project.
